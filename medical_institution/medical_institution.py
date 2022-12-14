@@ -21,6 +21,12 @@ if st.checkbox('Show raw data'):
     st.subheader('Raw data')
     st.write(df)
 
+# 일단 그래프 그려보기
+fig = plt.figure(figsize=(8, 4))
+sns.histplot(data=df, x='시')
+st.pyplot(fig)
+
+
 # 데이터를 분석하기
 st.subheader('시에 따른 분류')
 option = st.selectbox(
