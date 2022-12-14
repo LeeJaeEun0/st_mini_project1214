@@ -38,7 +38,6 @@ with tab1:
     station_data = df.loc[(df['시도'] == option)]
     st.write(station_data)
 
-
 with tab2:
     # 일단 그래프 그려보기 - 선택에 따라서 시안에 구만 보이게? 
     st.subheader('지역보건의료기관 시에 따른 분류')
@@ -59,5 +58,6 @@ with tab3:
     st.subheader('원하는 의료기관 정보 보기!') # 일부만 입력해도 출력되도록 고쳐야됨
     title = st.text_input('원하는 의료기관의 이름을 입력하세요!', 'Life of Brian')
     if title:
+        dataset[dataset['df'].str.contains(title, na = False)]
         station_data = df.loc[(df['보건기관명'] == title)]
         st.write(station_data)
