@@ -62,6 +62,9 @@ with tab2:
 with tab3:
     st.subheader('원하는 의료기관 정보 보기!')
     title = st.text_input('원하는 의료기관의 이름을 입력하세요!', 'Life of Brian')
+    if title:
+        station_data = df.loc[(df['보건기관명'] == title)]
+        st.write(station_data)
 
 
 
