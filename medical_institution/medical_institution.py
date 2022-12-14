@@ -18,7 +18,7 @@ if st.button('data copyright link'):
 
 
 # 데이터를 보여줌
-if st.checkbox('Show raw data'):
+if st.checkbox('원본 데이터 보기'):
     st.subheader('Raw data')
     st.write(df)
 
