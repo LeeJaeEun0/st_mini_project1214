@@ -20,3 +20,15 @@ if st.button('data copyright link'):
 if st.checkbox('Show raw data'):
     st.subheader('Raw data')
     st.write(df)
+
+# 데이터를 분석하기
+st.subheader('시에 따른 분류')
+option = st.selectbox(
+    'Select Line', 
+    (df['시도']))
+
+station_data = df.loc[(df['시도'] == option)]
+station_data = station_data[station_data.columns.difference(['시군구', '보건기관명'])]
+s_index = station_data.index.tolist()
+st.area_chart(station_data.loc[s_index[0]], use_container_width=True
+)
