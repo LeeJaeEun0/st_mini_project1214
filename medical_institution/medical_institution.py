@@ -42,7 +42,8 @@ with tab2:
     # 일단 그래프 그려보기 - 선택에 따라서 시안에 구만 보이게? 
     st.subheader('지역보건의료기관 시에 따른 분류 top 10')
     fig = plt.figure(figsize=(8, 4))
-    sns.histplot(data=df, x='시군구', bins=10)
+    # sns.histplot(data=df, x='시군구', bins=10)
+    sns.countplot(data=df, x='시군구')
     st.pyplot(fig)
 
     # 데이터를 분석하기 # 리스트 출력 # 시 - 군구
