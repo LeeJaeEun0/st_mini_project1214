@@ -60,19 +60,8 @@ with tab2:
     st.write(station_data)
 
 with tab3:
-    st.checkbox("Disable text input widget", key="disabled")
-    st.radio(
-        "Set text input label visibility 👉",
-        key="visibility",
-        options=["visible", "hidden", "collapsed"],
-    )
-    st.text_input(
-        "Placeholder for the other text input widget",
-        "This is a placeholder",
-        key="placeholder",
-    )
-    title = st.text_input('원하는 보건의', 'Life of Brian')
-    st.write('The current movie title is', title)
+    title = st.text_input('원하는 의료기관의 ㅈ저', 'Life of Brian')
+    st.write('원하는 보건의료 기관의 이름을 작성하세요', title)
 
 
 
