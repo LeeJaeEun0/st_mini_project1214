@@ -40,13 +40,15 @@ with tab1:
 
 with tab2:
     # 일단 그래프 그려보기 - 선택에 따라서 시안에 구만 보이게? 
+    # 선택한 구와 비슷한 다른구와 비교하는 것도 좋을 것 같음.
     st.subheader('지역보건의료기관 시에 따른 분류 top 10')
     fig = plt.figure(figsize=(8, 4))
     # sns.histplot(data=df, x='시군구', bins=10)
-    sns.countplot(data=df, x='시군구')
+    sns.countplot(data=df, x='시군구', order=df.시군구.value_counts()[:10].index)
     st.pyplot(fig)
 
-    # 데이터를 분석하기 # 리스트 출력 # 시 - 군구
+    # 데이터를 분석하기 # 리스트 출력
+    # 시를 선택하고 그에 맞는 구가 나오도록 개선 필요
     st.subheader('시군구에 따른 분류')
     option = st.selectbox(
         '시군구를 선택하세요', 
