@@ -33,7 +33,7 @@ st.pyplot(fig)
 st.subheader('시에 따른 분류')
 option = st.selectbox(
     '시를 선택하세요', 
-    (df['시도']))
+    (df['시도'].drop_duplicates()))
 
 station_data = df.loc[(df['시도'] == option)]
 st.write(station_data)
