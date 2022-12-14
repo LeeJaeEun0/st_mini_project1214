@@ -23,7 +23,7 @@ if st.checkbox('Show raw data'):
 
 # 일단 그래프 그려보기
 fig = plt.figure(figsize=(8, 4))
-sns.histplot(data=df, x='시')
+sns.histplot(data=df, x='시도')
 st.pyplot(fig)
 
 
