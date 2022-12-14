@@ -10,7 +10,7 @@ st.title('전국 지역보건의료기관 현황')
 # 파일 가져오기
 
 df = pd.read_csv('./medical_institution/medical_instituntion.csv', encoding='CP949')
-df.set_index = df['우편번호']
+df.set_index = df['보건기관명']
 
 # 데이터를 어디에서 가져왔는지
 if st.button('data copyright link'):
