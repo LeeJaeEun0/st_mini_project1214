@@ -23,7 +23,7 @@ if st.checkbox('Show raw data'):
     st.write(df)
 
 # 일단 그래프 그려보기
-st.title('지역보건의료기관 시에 따른 분류')
+st.subtitle('지역보건의료기관 시에 따른 분류')
 fig = plt.figure(figsize=(8, 4))
 sns.histplot(data=df, x='시도')
 st.pyplot(fig)
