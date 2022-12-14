@@ -15,7 +15,6 @@ df.set_index = df['보건기관명']
 if st.button('data copyright link'):
     st.write('https://www.data.go.kr/tcs/dss/selectFileDataDetailView.do?publicDataPk=3072692')
 
-
 # 데이터를 보여줌
 if st.checkbox('원본 데이터 보기'):
     st.subheader('Raw data')
@@ -30,7 +29,6 @@ with tab1:
     sns.histplot(data=df, x='시도')
     st.pyplot(fig)
 
-
     # 데이터를 분석하기 # 리스트 출력
     st.subheader('시에 따른 분류')
     option = st.selectbox(
@@ -39,8 +37,6 @@ with tab1:
 
     station_data = df.loc[(df['시도'] == option)]
     st.write(station_data)
-
-
 
 
 with tab2:
@@ -60,11 +56,8 @@ with tab2:
     st.write(station_data)
 
 with tab3:
-    st.subheader('원하는 의료기관 정보 보기!')
+    st.subheader('원하는 의료기관 정보 보기!') # 일부만 입력해도 출력되도록 고쳐야됨
     title = st.text_input('원하는 의료기관의 이름을 입력하세요!', 'Life of Brian')
     if title:
         station_data = df.loc[(df['보건기관명'] == title)]
         st.write(station_data)
-
-
-
