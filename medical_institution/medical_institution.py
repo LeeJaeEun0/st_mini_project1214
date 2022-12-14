@@ -60,8 +60,8 @@ with tab2:
     st.write(station_data)
 
 with tab3:
-    title = st.text_input('원하는 의료기관의 ㅈ저', 'Life of Brian')
-    st.write('원하는 보건의료 기관의 이름을 작성하세요', title)
+    st.subheader('원하는 의료기관 정보 보기!')
+    title = st.text_input('원하는 의료기관의 이름을 입력하세요!', 'Life of Brian')
 
 
 
