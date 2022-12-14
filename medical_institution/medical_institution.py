@@ -21,7 +21,7 @@ if st.checkbox('원본 데이터 보기'):
     st.subheader('Raw data')
     st.write(df)
 
-tab1, tab2, tab3 = st.tabs(["시에 따른 분류", "시군구에 따른 분류", "보건기관별 안내"])
+tab1, tab2, tab3 = st.tabs(["시에 따른 분류", "시군구에 따른 분류", "보건기관 검색하기"])
 
 with tab1:
    # 일단 그래프 그려보기
@@ -60,9 +60,19 @@ with tab2:
     st.write(station_data)
 
 with tab3:
-   st.header("An owl")
-   st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
-
+    st.checkbox("Disable text input widget", key="disabled")
+    st.radio(
+        "Set text input label visibility 👉",
+        key="visibility",
+        options=["visible", "hidden", "collapsed"],
+    )
+    st.text_input(
+        "Placeholder for the other text input widget",
+        "This is a placeholder",
+        key="placeholder",
+    )
+    title = st.text_input('원하는 보건의', 'Life of Brian')
+    st.write('The current movie title is', title)
 
 
 
