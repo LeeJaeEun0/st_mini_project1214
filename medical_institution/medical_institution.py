@@ -47,7 +47,7 @@ with tab2:
     st.pyplot(fig)
 
     # 데이터를 분석하기 # 리스트 출력 # 시 - 군구
-    st.subheader('시에 따른 분류')
+    st.subheader('시군구에 따른 분류')
     option = st.selectbox(
         '시군구를 선택하세요', 
         (df['시군구'].drop_duplicates()))
@@ -56,7 +56,7 @@ with tab2:
 
 with tab3:
     st.subheader('원하는 의료기관 정보 보기!') # 일부만 입력해도 출력되도록 고쳐야됨
-    title = st.text_input('원하는 의료기관의 이름을 입력하세요!', 'Life of Brian')
+    title = st.text_input('원하는 의료기관의 이름을 입력하세요!(보건소까지 정확하게 입력해주세요!)', 'Life of Brian')
     if title:
         station_data = df.loc[(df['보건기관명'] == title)]
         st.write(station_data)
