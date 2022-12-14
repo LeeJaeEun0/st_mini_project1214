@@ -3,10 +3,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-from matplotlib import font_manager, rc
-font_path = "C:/Windows/Fonts/NGULIM.TTF"
-font = font_manager.FontProperties(fname=font_path).get_name()
-rc('font', family=font)
+
 
 st.title('전국 지역보건의료기관 현황')
 
