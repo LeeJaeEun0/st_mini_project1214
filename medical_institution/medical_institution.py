@@ -3,8 +3,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-
-
+plt.rcParams['font.family'] = 'NanumGothic'
 st.title('전국 지역보건의료기관 현황')
 
 # 파일 가져오기
